@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello, Serverless! 🚀\n", 200, {'Content-Type': 'text/plain'}
+    return "Hello, Serverless! 🚀\n", 300, {'Content-Type': 'text/plain'}
 
 @app.route('/echo', methods=['POST'])
 def echo():
