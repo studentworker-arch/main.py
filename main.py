@@ -14,7 +14,8 @@ if DATABASE_URL:
         user=url.username,
         password=url.password,
         host=url.hostname,
-        port=url.port
+        port=url.port,
+        sslmode='require'
     )
 else:
     conn = None
