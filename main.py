@@ -5,6 +5,10 @@ from urllib.parse import urlparse
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return "Hello, Serverless! 🚀\n", 200, {'Content-Type': 'text/plain'}
+
 # Подключение к БД
 DATABASE_URL = os.environ.get('DATABASE_URL')
 if DATABASE_URL:
