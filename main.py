@@ -9,15 +9,6 @@ app = Flask(__name__)
 def hello():
     return "Hello, Serverless! 🚀\n", 200, {'Content-Type': 'text/plain'}
 
-@app.route('/echo', methods=['POST'])
-def echo():
-    data = request.get_json()
-    return jsonify({
-        "status": "received",
-        "you_sent": data,
-        "length": len(str(data)) if data else 0
-    })
-
 # Подключение к БД
 DATABASE_URL = os.environ.get('DATABASE_URL')
 if DATABASE_URL:
